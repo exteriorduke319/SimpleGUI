@@ -3,63 +3,63 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class GUI {
+public class shlorp {
     private JLabel value;
     private JLabel changeCounter;
     private int x;
     private int changeNum;
-    public GUI(){
-        JFrame frame = new JFrame("Simple GUI");
-        frame.setSize(600, 400);
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    public shlorp(){
+        JFrame goop = new JFrame("Simple GUI");
+        goop.setSize(600, 400);
+        goop.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        JPanel panel = new JPanel();
-        panel.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
-        panel.setLayout(new GridLayout(2,2,10,10));
+        JPanel glorp = new JPanel();
+        glorp.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
+        glorp.setLayout(new GridLayout(2,2,10,10));
 
         x = 0;
         changeNum = 0;
         value = new JLabel("Value: " + x);
         value.setHorizontalAlignment(JLabel.CENTER);
-        panel.add(value);
+        glorp.add(value);
 
         changeCounter = new JLabel("Number of Changes: " + x);
         changeCounter.setHorizontalAlignment(JLabel.CENTER);
-        panel.add(changeCounter);
+        glorp.add(changeCounter);
 
-        JButton button = new JButton("-1");
-        JButton button2 = new JButton("+1");
+        JButton glop = new JButton("-1");
+        JButton gunge = new JButton("+1");
 
 
-        button.addActionListener(new ActionListener() {
+        glop.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                b1Press();
+                glopPress();
             }
         });
 
-        button2.addActionListener(new ActionListener() {
+        gunge.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                b2Press();
+                gungePress();
             }
         });
 
-        panel.add(button);
-        panel.add(button2);
+        glorp.add(glop);
+        glorp.add(gunge);
 
-        frame.add(panel);
-        frame.setVisible(true);
+        goop.add(glorp);
+        goop.setVisible(true);
 
     }
     public static void main(String[] args) {
-        new GUI();
+        new shlorp();
     }
 
-    public void b1Press() {
+    public void glopPress() {
         x -= 1;
         afterPress();
     }
 
-    public void b2Press() {
+    public void gungePress() {
         x += 1;
         afterPress();
     }
